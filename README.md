@@ -35,3 +35,25 @@ L'infrastructure repose sur un modèle hybride LAN / WAN :
 * **Services Réseau :** Active Directory (AD DS), DNS, LDAP
 * **VPN / Réseau :** Tailscale (Protocole WireGuard)
 * **Application :** Nextcloud Hub
+
+
+---
+
+## 🏢 Focus : Fonctionnement en Connexion Locale (LAN)
+
+Lorsque les utilisateurs sont présents physiquement dans les locaux de l'entreprise, l'infrastructure passe automatiquement en flux direct, maximisant les performances et la vitesse de transfert.
+
+### 📝 Définition du Scénario Local
+
+La **connexion locale directe** désigne la situation où un poste client (ex: *Client 1* ou *Client 2*) est connecté au même réseau privé physique que les serveurs. 
+
+Dans ce cas de figure, les paquets de données transitent uniquement par les équipements de commutation internes (**Switch / Wi-Fi**). Les flux n'ont pas besoin de sortir sur l'internet public : ils s'affranchissent totalement du VPN Tailscale et ne sollicitent ni le routeur ni le modem de l'entreprise.
+
+### 🧭 Cheminement Réseau Étape par Étape
+
+Lorsqu'un utilisateur initie une connexion depuis l'intérieur de l'entreprise, le trafic suit le parcours suivant :
+
+```text
+[ Client 1 / 2 ] ──(Wi-Fi / Câble)──> [ Switch / Wi-Fi ] ────> [ Serveur AD Entreprise ]
+
+![alt text](image-2.png)
