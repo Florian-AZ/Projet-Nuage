@@ -56,4 +56,4 @@ Lorsqu'un utilisateur initie une connexion depuis l'intérieur de l'entreprise, 
 ```text
 [ Client 1 / 2 ] ──(Wi-Fi / Câble)──> [ Switch / Wi-Fi ] ────> [ Serveur AD Entreprise ]
 
-![alt text](image-2.png)
+<img width="640" height="675" alt="lan" src="https://github.com/user-attachments/assets/c8be77ff-0f95-458e-9c8e-5aa05f3078c9" />
